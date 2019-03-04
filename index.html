@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Contact V14</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<style>
+		.tr-nv{
+				color: white;
+				font-weight: bold;
+				font-size: italic;
+			}
+		</style>
+	<!--===============================================================================================-->
+</head>
+
+<body>
+
+
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Quản lý Nhân Viên
+				</span>
+
+
+	
+					<div class="wrap-input100 rs1 validate-input">
+						<input id="ho" class="input100" type="text" name="ho" placeholder="Họ và Tên">
+						<span class="sp-thongbao" id="tbHoTen" style="color:red"></span>
+					</div>
+		
+			
+	
+
+
+				<div class="wrap-input100 rs1 validate-input">
+					<input id="ma" class="input100" type="text" name="MaNhanVien" placeholder="Mã Nhân Viên">
+					<span class="sp-thongbao" id="tbMa" style="color:red"></span>
+				</div>
+
+
+				<div class="wrap-input100 rs1 validate-input">
+					<input id="email" class="input100" type="email" name="email" placeholder="Email">
+					<span class="sp-thongbao" id="tbEmail" style="color:red"></span>
+				</div>
+
+
+				<div class="wrap-input100 rs1">
+					<input id="phone" class="input100" type="tel" name="phone" placeholder="Điện Thoại"  >
+					<span class="sp-thongbao" id="tbPhone" style="color:red"></span>
+				</div>
+	
+
+
+
+				<div class="wrap-input100 rs1">
+					<input id="ngay" class="input100" type="date" name="ngay" value="2018-12-01" >
+					<span class="sp-thongbao" id="tbNgay" ></span>
+				</div>
+
+
+
+
+				<div class="wrap-input100 rs1">
+					<input id="luong" class="input100" type="number" name="luong" placeholder="Lương cơ bản">
+					<span class="sp-thongbao" id="tbLuong" style="color:red"></span>
+				</div>
+
+
+				<div class="wrap-input100 rs1">
+					<input id="songay" class="input100" type="number" name="songay" placeholder="Số Ngày Làm">
+					<span class="sp-thongbao" id="tbNgayLam" style="color:red"></span>
+				</div>
+
+
+				<div class="wrap-input100 rs1">
+					<input id="phucap" class="input100" type="number" name="phucap" placeholder="Lương Phụ Cấp">
+					<span class="sp-thongbao" id="tbPhuCap" style="color:red"></span>
+				</div>
+
+
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn" id="btnThemNV" type="button">
+						<span>
+							Thêm Nhân Viên <i class="zmdi zmdi-arrow-right m-l-8"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+
+		<div id="hienthi" class="container">
+
+			
+
+
+			<div class="row text-center ">
+				
+			<div class="col-sm-3">
+					<div class="my-4">
+							<button class="btn btn-warning text-white" id="SapXepNhanVienGiam">Nhân Viên Lương Giảm dần </button>
+					</div>
+	
+			</div>
+			<div class="col-sm-3">
+					<div class="my-4">
+							<button class="btn btn-warning text-white" id="ThuTuTenNhanVien">Sắp xếp Nhân Viên </button>
+						</div>
+	
+			</div>
+			<div class="col-sm-3">
+					<div class="my-4">
+							<button class="btn btn-warning text-white" id="NhanVienLuongCao" > Nhân Viên Lương cao  </button>
+						</div>
+	
+			</div>
+			<div class="col-sm-3">
+					<div class="my-4">
+							<button class="btn btn-warning text-white" id="DemNhanVienluong10" >Đếm Nhân Viên Lương Cao hơn 1000 </button>
+					</div>
+	
+			</div>
+			</div>
+
+
+
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="input-group my-4 ">
+						<input type="text" class="form-control " id="txtSearch" placeholder="Tìm Kiếm">
+						<span class="input-group-btn">
+							<button class="btn btn-warning text-white" id="btnSearch"> <i class="fa fa-search"></i> </button>
+						</span>
+					</div>
+				</div>
+			</div>
+
+
+			<table class="table">
+				<thead>
+					<tr class="text-white">
+						<th>STT</th>
+						<th>Mã Nhân Viên</th>
+						<th>Họ Tên</th>
+						<th>Email</th>
+						<th>SĐT</th>
+						<th>Ngày Sinh</th>
+						<th>Tổng Lương</th>
+						<th>Thao tác </th>
+
+					</tr>
+				</thead>
+
+				<tbody id="tbodyNhanVien"></tbody>
+
+
+			</table>
+		</div>
+
+
+		<div class="hienthimang">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="modals widget-shadow text-center py-4 text-white " >
+						<h3 id="SapXepNhanVienGiams"></h3>
+						<h3 id="ThuTuTenNhanViens"></h3>
+						<h3 id="NhanVienLuongCaos"></h3>
+						<h3 id="DemNhanVienluong10s"></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Sửa Nhân Viên</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form role="form">
+						<div class="container">
+
+							<div class="form-group">
+								<input type="text" name="msnv" id="editMSNV" class="form-control input-sm" placeholder="Mã nhân viên" disabled>
+	
+							</div>
+							
+							<div class="form-group">
+								<input type="text" name="ho" id="editHoTen" class="form-control input-sm floatlabel" placeholder="Họ và Tên">
+							</div>
+
+							<div class="form-group">
+								<input type="text" name="email" id="editEmail" class="form-control input-sm" placeholder="Email">
+							</div>
+
+							<div class="form-group">
+								<input type="text" name="sdt" id="editSdt" class="form-control input-sm" placeholder="Số Điện Thoại">
+							</div>
+
+
+							<div class="row">
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-group">
+										<div style="display: flex;">
+											<input type="date" name="ngaylam" id="editNgayBatDau" class="form-control input-sm" placeholder="Ngày bắt đầu">
+										</div>
+	
+									</div>
+	
+								</div>
+							</div>
+
+							<div class="form-group">
+								<input type="text" name="luong" id="editLuong" class="form-control input-sm" placeholder="Lương Cơ bản">
+							</div>
+
+							<div class="form-group">
+								<input type="text" name="ngaylam" id="editNgayLam" class="form-control input-sm" placeholder="Ngày Làm">
+							</div>
+
+
+							<div class="form-group">
+								<input type="text" name="phucap" id="editPhucap" class="form-control input-sm" placeholder="Phụ Cấp">
+							</div>
+
+	
+							<div class="text-center">
+								<input type="button" style="color:white" value="Lưu Thay Đổi" class="btn btn-warning" data-dismiss="modal" id="btnSuaNV">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script src="./js/sweetalert2.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<!--===============================================================================================-->
+	<script src="js/nhanvien.js"></script>
+	<script src="js/main.js"></script>
+
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-23581568-13');
+	</script>
+
+</body>
+
+</html>
